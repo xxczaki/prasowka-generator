@@ -1,6 +1,6 @@
 {
-	"name": "prasowka-generator",
-	"description": "Zbliża się lekcja WOSu, a prasówki brak? Nie ma problemu - Prasówka Generator wyszuka dla ciebie interesujące wiadomości i pomoże w utworzeniu tej bezsensownej wypowiedzi!",
+  "name": "prasowka-generator",
+  "description": "Zbliża się lekcja WOSu, a prasówki brak? Nie ma problemu - Prasówka Generator wyszuka dla ciebie interesujące wiadomości i pomoże w utworzeniu tej bezsensownej wypowiedzi!",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "bayes": "0.0.7",
     "core-js": "2.6.5",
     "modern-normalize": "^0.5.0",
     "newsapi": "^2.4.0",
@@ -25,7 +26,7 @@
     "babel-plugin-styled-components": "^1.10.6",
     "css-loader": "^1.0.1",
     "eslint-config-xo-react": "^0.20.0",
-    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react": "^7.15.1",
     "eslint-plugin-react-hooks": "^2.1.1",
     "next-offline": "^4.0.5",
     "stylelint": "^11.0.0",
