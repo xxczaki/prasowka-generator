@@ -1,38 +1,58 @@
 {
-  "name": "prasowka-generator",
-  "description": "Zbliża się lekcja WOSu, a prasówki brak? Nie ma problemu - Prasówka Generator wyszuka dla ciebie interesujące wiadomości i pomoże w utworzeniu tej bezsensownej wypowiedzi!",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+ "name": "prasowka-generator",
+ "description": "Zbliża się lekcja WOSu, a prasówki brak? Nie ma problemu - Prasówka Generator wyszuka dla ciebie interesujące wiadomości i pomoże w utworzeniu tej bezsensownej wypowiedzi!",
+ "version": "0.1.0",
+ "private": true,
+ "scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start"
+ },
+ "dependencies": {
+  "bayes": "0.0.7",
+  "cheerio": "^1.0.0-rc.3",
+  "core-js": "2.6.5",
+  "modern-normalize": "^0.5.0",
+  "newsapi": "^2.4.0",
+  "next": "9.0.7",
+  "react": "16.10.1",
+  "react-dom": "16.10.1",
+  "react-use-form-state": "^0.11.0",
+  "styled-components": "^5.0.0-beta.9"
+ },
+ "devDependencies": {
+  "@babel/core": "^7.6.2",
+  "@zeit/next-css": "^1.0.1",
+  "babel-eslint": "^10.0.3",
+  "babel-plugin-styled-components": "^1.10.6",
+  "css-loader": "^1.0.1",
+  "eslint-config-xo-react": "^0.20.0",
+  "eslint-plugin-react": "^7.15.1",
+  "eslint-plugin-react-hooks": "^2.1.1",
+  "next-offline": "^4.0.5",
+  "stylelint": "^11.0.0",
+  "stylelint-config-recommended": "^3.0.0",
+  "stylelint-config-styled-components": "^0.1.1",
+  "stylelint-processor-styled-components": "^1.8.0",
+  "xo": "^0.25.3"
+ },
+ "xo": {
+  "nodeVersion": ">=10",
+  "parser": "babel-eslint",
+  "envs": [
+   "node",
+   "browser"
+  ],
+  "extends": "xo-react",
+  "settings": {
+   "react": {
+    "version": "16.10"
+   }
   },
-  "dependencies": {
-    "bayes": "0.0.7",
-    "core-js": "2.6.5",
-    "modern-normalize": "^0.5.0",
-    "newsapi": "^2.4.0",
-    "next": "9.0.7",
-    "react": "16.10.1",
-    "react-dom": "16.10.1",
-    "react-use-form-state": "^0.11.0",
-    "styled-components": "^5.0.0-beta.9"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.6.2",
-    "@zeit/next-css": "^1.0.1",
-    "babel-eslint": "^10.0.3",
-    "babel-plugin-styled-components": "^1.10.6",
-    "css-loader": "^1.0.1",
-    "eslint-config-xo-react": "^0.20.0",
-    "eslint-plugin-react": "^7.15.1",
-    "eslint-plugin-react-hooks": "^2.1.1",
-    "next-offline": "^4.0.5",
-    "stylelint": "^11.0.0",
-    "stylelint-config-recommended": "^3.0.0",
-    "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.8.0",
-    "xo": "^0.25.3"
+  "rules": {
+   "import/no-unassigned-import": "off",
+   "import/no-unresolved": "off",
+   "react/jsx-child-element-spacing": "off"
   }
+ }
 }
