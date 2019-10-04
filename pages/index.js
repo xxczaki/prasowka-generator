@@ -14,14 +14,14 @@ const Utility = dynamic(
 );
 
 const Index = () => {
-    return (
-        <Container>
-            <Header>Prasówka Generator</Header>
+	return (
+		<Container>
+			<Header>Prasówka Generator</Header>
 			<Description>Dostosuj generator poniżej i znajdź ciekawe wiadomości!</Description>
 			<Navigation/>
 			<Utility/>
-        </Container>
-    )
-}
+		</Container>
+	);
+};
 
 export default Index;
