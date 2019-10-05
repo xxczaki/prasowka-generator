@@ -18,6 +18,14 @@ const GlobalStyle = createGlobalStyle`
 		-webkit-font-smoothing: antialiased;
 		text-rendering: optimizeSpeed;
 	}
+
+	summary {
+		cursor: pointer;
+	}
+
+	:focus {
+    	outline: none;
+  	}
 `;
 
 class MyApp extends App {
