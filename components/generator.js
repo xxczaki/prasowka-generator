@@ -23,7 +23,7 @@ const Utility = () => {
 				<div key={e.title} style={{width: '80%'}}>
 					<h3>{e.title}</h3>
 					<br/>
-					<p>{e.description} <ExternalLink href={e.url}>[CZYTAJ DALEJ]</ExternalLink></p>
+					<p>{e.description.replace(/czytaj|dalej|»/g, '')} <ExternalLink href={e.url}>[CZYTAJ DALEJ]</ExternalLink></p>
 					<br/>
 					<hr/>
 				</div>
@@ -46,7 +46,7 @@ const Utility = () => {
 				<div key={e.title} style={{width: '80%'}}>
 					<h3>{e.title}</h3>
 					<br/>
-					<p>{e.description} <ExternalLink href={e.url}>[CZYTAJ DALEJ]</ExternalLink></p>
+					<p>{e.description.replace(/czytaj|dalej|»/g, '')} <ExternalLink href={e.url}>[CZYTAJ DALEJ]</ExternalLink></p>
 					<br/>
 					<hr/>
 				</div>
