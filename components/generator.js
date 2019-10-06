@@ -17,6 +17,7 @@ const Utility = () => {
 		const {values} = formState;
 
 		if (values.region === 'poland') {
+			await setResults('Pobieranie artykułów...');
 			const articles = await getPolandArticles();
 
 			const formatted = articles.map(e => (
@@ -40,6 +41,7 @@ const Utility = () => {
 				</>
 			);
 		} else if (values.region === 'world') {
+			await setResults('Pobieranie artykułów...');
 			const articles = await getWorldArticles();
 
 			const formatted = articles.map(e => (
@@ -63,6 +65,7 @@ const Utility = () => {
 				</>
 			);
 		} else {
+			await setResults('Pobieranie artykułów...');
 			const articles = await getWlkpArticles();
 
 			const formatted = articles.map(e => (
