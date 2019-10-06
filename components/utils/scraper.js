@@ -82,7 +82,7 @@ const getPolandArticles = async () => {
 
 	const result = [...articles].map(selector => {
 		const title = $(selector).find('h1').find('a').text();
-		const description = $(selector).find('p').hasClass('lead') ? $(selector).find('p').text() : $(selector).find('div').next().next().text();
+		const description = $(selector).find('p').hasClass('lead') ? $(selector).find('p').text() : $(selector).find('div.lead').text();
 		const url = `https://www.tvn24.pl${$(selector).find('h1').find('a').attr('href')}`;
 
 		return {
@@ -129,7 +129,7 @@ const getWorldArticles = async () => {
 
 	const result = [...articles].map(selector => {
 		const title = $(selector).find('h1').find('a').text();
-		const description = $(selector).find('p').hasClass('lead') ? $(selector).find('p').text() : $(selector).find('div').next().next().text();
+		const description = $(selector).find('p').hasClass('lead') ? $(selector).find('p').text() : $(selector).find('div.lead').text();
 		const url = `https://www.tvn24.pl${$(selector).find('h1').find('a').attr('href')}`;
 
 		return {
