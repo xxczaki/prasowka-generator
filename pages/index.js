@@ -17,7 +17,7 @@ const Index = () => {
 	return (
 		<Container>
 			<Header>Prasówka Generator</Header>
-			<Description>Dostosuj generator poniżej i znajdź ciekawe wiadomości!</Description>
+			<Description>Wygeneruj prasówkę jednym kliknięciem!</Description>
 			<Navigation/>
 			<Utility/>
 		</Container>
