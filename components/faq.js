@@ -10,11 +10,11 @@ const Faq = () => (
 		<br/>
 		<details>
 			<summary>Skąd pochodzą wiadomości?</summary>
-			<p>Po wygenerowaniu wiadomości na dole strony znajduje się ich źródło.</p>
+			<p>Pod opisem każdej wiadomości znajduje się jej źródło.</p>
 		</details>
 		<br/>
 		<details>
-			<summary>Czy wiadomości są najnowsze?</summary>
+			<summary>Czy wiadomości są aktualne?</summary>
 			<p>W celu oszczędzenia danych generator zapisuje znalezione wiadomości w pamięci podręcznej.</p>
 			<p>Są one czyszczone po 30 minutach, aby generator nie podawał starych artykułów.</p>
 		</details>
