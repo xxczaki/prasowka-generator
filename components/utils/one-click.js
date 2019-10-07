@@ -6,11 +6,14 @@ import ExternalLink from '../link';
 
 import {getWlkpArticles, getPolandArticles, getWorldArticles} from './scraper';
 
+// Generator
 const oneClickHandler = async () => {
+	// Download articles from all regions
 	const wlkpNews = await getWlkpArticles();
 	const plNews = await getPolandArticles();
 	const worldNews = await getWorldArticles();
 
+	// Pick random article from each array
 	const wielkopolska = await wlkpNews[Math.floor(Math.random() * wlkpNews.length)];
 	const poland = await plNews[Math.floor(Math.random() * plNews.length)];
 	const world = await worldNews[Math.floor(Math.random() * worldNews.length)];
