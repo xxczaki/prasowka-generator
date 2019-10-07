@@ -10,7 +10,7 @@ const Navigation = dynamic(() => import('../components/navigation'));
 const Information = dynamic(
 	() => import('../components/information'),
 	{
-		loading: () => <p>Loading...</p>
+		loading: () => <p>Ładowanie...</p>
 	}
 );
 

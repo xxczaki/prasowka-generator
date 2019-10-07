@@ -10,7 +10,7 @@ const Navigation = dynamic(() => import('../components/navigation'));
 const Faq = dynamic(
 	() => import('../components/faq'),
 	{
-		loading: () => <p>Loading...</p>
+		loading: () => <p>Ładowanie...</p>
 	}
 );
 

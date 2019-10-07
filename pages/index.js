@@ -9,7 +9,7 @@ import Navigation from '../components/navigation';
 const Utility = dynamic(
 	() => import('../components/generator'),
 	{
-		loading: () => <p>Loading...</p>
+		loading: () => <p>Ładowanie...</p>
 	}
 );
 
