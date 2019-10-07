@@ -21,6 +21,9 @@ const Button = styled.button`
         background-size: 100%;
         transition: background 0s;
     }
+	&:disabled {
+		background-color: #545454;
+	}
 `;
 
 export default Button;
