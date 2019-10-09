@@ -53,6 +53,10 @@ const oneClickHandler = async () => {
 				<br/>
 				<hr/>
 			</div>
+			<footer>
+				<br/>
+				<b>Prawa autorskie do artykułów należą do ich autorów.</b>
+			</footer>
 		</>
 	);
 
