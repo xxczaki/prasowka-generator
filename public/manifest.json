@@ -1,14 +1,14 @@
 {
     "name": "Prasówka Generator",
-    "short_name": "Prasówka Gen",
+    "short_name": "Prasówka",
     "icons": [
       {
-        "src": "/static/favicon-small.png",
+        "src": "/favicon-small.png",
         "sizes": "192x192",
         "type": "image/png"
       },
       {
-        "src": "/static/favicon.png",
+        "src": "/favicon.png",
         "sizes": "512x512",
         "type": "image/png"
       }
