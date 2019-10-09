@@ -3,12 +3,25 @@ import Head from 'next/head';
 import React from 'react';
 import {createGlobalStyle} from 'styled-components';
 
+// Assets
 import '../node_modules/modern-normalize/modern-normalize.css';
+import RobotoMonoWoff from '../public/fonts/roboto-mono-v7-latin-regular.woff';
+import RobotoMonoWoff2 from '../public/fonts/roboto-mono-v7-latin-regular.woff2';
 
 const GlobalStyle = createGlobalStyle`
+	@font-face {
+		font-family: 'Roboto Mono';
+		font-style: normal;
+		font-weight: 400;
+		font-display: fallback;
+		src: local('Roboto Mono'), local('RobotoMono-Regular'),
+			url(${RobotoMonoWoff2}) format('woff2'),
+			url(${RobotoMonoWoff}) format('woff');
+  	}
+
 	body {
 		background-color: #212121;
-		font-family: monospace;
+		font-family: Roboto Mono, monospace;
 		margin: auto;
 		width: 80%;
 		font-size: 16px;
