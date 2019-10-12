@@ -17,11 +17,11 @@ const GlobalStyle = createGlobalStyle`
 		src: local('Roboto Mono'), local('RobotoMono-Regular'),
 			url(${RobotoMonoWoff2}) format('woff2'),
 			url(${RobotoMonoWoff}) format('woff');
-  	}
+	}
 
 	body {
 		background-color: #212121;
-		font-family: Roboto Mono, monospace;
+		font-family: 'Roboto Mono', monospace;
 		margin: auto;
 		width: 80%;
 		font-size: 16px;
@@ -37,8 +37,8 @@ const GlobalStyle = createGlobalStyle`
 	}
 
 	:focus {
-    	outline: none;
-  	}
+		outline: none;
+	}
 `;
 
 class MyApp extends App {
