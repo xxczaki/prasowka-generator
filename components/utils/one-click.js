@@ -63,4 +63,6 @@ const oneClickHandler = async () => {
 	return result;
 };
 
-export default oneClickHandler;
+export {
+	oneClickHandler
+};
