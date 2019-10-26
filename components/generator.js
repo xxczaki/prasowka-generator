@@ -1,9 +1,8 @@
 import React, {useState} from 'react';
+import dynamic from 'next/dynamic';
 
 import Button from './button';
-import Loading from './loading';
-
-import oneClickHandler from './utils/one-click';
+const Loading = dynamic(() => import('./loading'));
 
 const Utility = () => {
 	const [results, setResults] = useState(null);
@@ -15,10 +14,12 @@ const Utility = () => {
 			setResults(<Loading/>);
 		}
 
-		const result = await oneClickHandler();
+		import('./utils/one-click').then(async module => {
+			const result = await module.oneClickHandler();
 
-		setClicked(false);
-		setResults(result);
+			setClicked(false);
+			setResults(result);
+		});
 	};
 
 	return (
