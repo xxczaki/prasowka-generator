@@ -4,7 +4,8 @@ import React from 'react';
 
 import ExternalLink from '../link';
 
-import {getWlkpArticles, getPolandArticles, getWorldArticles} from './scraper';
+import {getWlkpArticles} from './glos-wlkp-scraper';
+import {getPolandArticles, getWorldArticles} from './tvn24-scraper';
 
 // Generator
 const oneClickHandler = async () => {
