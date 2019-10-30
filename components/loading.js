@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import Spinner from './spinner';
 import Bold from './bold';
@@ -13,11 +14,15 @@ const Wrapper = styled.div`
 	user-select: none;
 `;
 
-const Loading = () => (
+const Loading = ({text}) => (
 	<Wrapper>
 		<Spinner/>
-		<Bold>Generowanie prasówki...</Bold>
+		<Bold>{text}</Bold>
 	</Wrapper>
 );
+
+Loading.propTypes = {
+	text: PropTypes.string.isRequired
+};
 
 export default Loading;
