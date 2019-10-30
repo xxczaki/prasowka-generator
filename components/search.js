@@ -19,7 +19,7 @@ const Search = () => {
 
 		if (!results) {
 			setClicked(true);
-			setResults(<Loading/>);
+			setResults(<Loading text="Wyszukiwanie wiadomości..."/>);
 		}
 
 		import('./utils/finder').then(async module => {

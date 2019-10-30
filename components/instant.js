@@ -11,7 +11,7 @@ const Instant = () => {
 	const handleSubmit = async () => {
 		if (!results) {
 			setClicked(true);
-			setResults(<Loading/>);
+			setResults(<Loading text="Generowanie prasówki..."/>);
 		}
 
 		import('./utils/one-click').then(async module => {
