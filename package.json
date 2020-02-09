@@ -1,60 +1,59 @@
 {
- "name": "prasowka-generator",
- "description": "Zbliża się lekcja WOSu, a prasówki brak? Nie ma problemu - Prasówka Generator wyszuka dla ciebie interesujące wiadomości i pomoże w utworzeniu tej bezsensownej wypowiedzi!",
- "version": "0.1.0",
- "private": true,
- "scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "start": "next start",
-  "test": "xo && stylelint 'pages/**/*.js'"
- },
- "dependencies": {
-  "cheerio": "^1.0.0-rc.3",
-  "core-js": "3.4.0",
-  "idb-keyval": "^3.2.0",
-  "modern-normalize": "^0.5.0",
-  "next": "9.1.3",
-  "next-fonts": "^0.19.0",
-  "prop-types": "^15.7.2",
-  "react": "16.11.0",
-  "react-dom": "16.11.0",
-  "react-use-form-state": "^0.12.0",
-  "styled-components": "^5.0.0-beta.11"
- },
- "devDependencies": {
-  "@babel/core": "^7.7.2",
-  "@zeit/next-css": "^1.0.1",
-  "babel-eslint": "^10.0.3",
-  "babel-plugin-styled-components": "^1.10.6",
-  "css-loader": "^3.2.0",
-  "eslint-config-xo-react": "^0.20.0",
-  "eslint-plugin-react": "^7.16.0",
-  "eslint-plugin-react-hooks": "^2.2.0",
-  "next-offline": "^4.0.6",
-  "stylelint": "^11.1.1",
-  "stylelint-config-styled-components": "^0.1.1",
-  "stylelint-config-xo": "^0.15.0",
-  "stylelint-processor-styled-components": "^1.8.0",
-  "xo": "^0.25.3"
- },
- "xo": {
-  "nodeVersion": ">=10",
-  "parser": "babel-eslint",
-  "envs": [
-   "node",
-   "browser"
-  ],
-  "extends": "xo-react",
-  "settings": {
-   "react": {
-    "version": "16.11"
-   }
-  },
-  "rules": {
-   "import/no-unassigned-import": "off",
-   "import/no-unresolved": "off",
-   "react/jsx-child-element-spacing": "off"
-  }
- }
+    "name": "prasowka-generator",
+    "description": "Zbliża się lekcja WOSu, a prasówki brak? Nie ma problemu - Prasówka Generator wyszuka dla ciebie interesujące wiadomości i pomoże w utworzeniu tej bezsensownej wypowiedzi!",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "test": "xo && stylelint 'pages/**/*.js'"
+    },
+    "dependencies": {
+        "cheerio": "^1.0.0-rc.3",
+        "core-js": "3.6.4",
+        "framer-motion": "^1.8.4",
+        "idb-keyval": "^3.2.0",
+        "next": "9.2.1",
+        "next-fonts": "^1.0.3",
+        "prop-types": "^15.7.2",
+        "react": "16.12.0",
+        "react-dom": "16.12.0",
+        "react-use-form-state": "^0.12.1",
+        "styled-components": "^5.0.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.8.4",
+        "babel-eslint": "^10.0.3",
+        "babel-plugin-styled-components": "^1.10.7",
+        "css-loader": "^3.4.2",
+        "eslint-config-xo-react": "^0.22.0",
+        "eslint-plugin-react": "^7.18.3",
+        "eslint-plugin-react-hooks": "^2.3.0",
+        "next-offline": "^5.0.0",
+        "stylelint": "^13.1.0",
+        "stylelint-config-styled-components": "^0.1.1",
+        "stylelint-config-xo": "^0.16.1",
+        "stylelint-processor-styled-components": "^1.9.0",
+        "xo": "^0.25.3"
+    },
+    "xo": {
+        "nodeVersion": ">=10",
+        "parser": "babel-eslint",
+        "envs": [
+            "node",
+            "browser"
+        ],
+        "extends": "xo-react",
+        "settings": {
+            "react": {
+                "version": "16.12"
+            }
+        },
+        "rules": {
+            "import/no-unassigned-import": "off",
+            "import/no-unresolved": "off",
+            "react/jsx-child-element-spacing": "off"
+        }
+    }
 }

@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 
 const Input = styled.input`
-    cursor: pointer;
     color: #fff;
     background-color: #474747;
     margin-top: 10px;
     margin-bottom: 20px;
-    width: 235px;
+    width: 16em;
     padding: 10px;
     border: none;
     border-radius: 6px;

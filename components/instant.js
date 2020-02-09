@@ -1,31 +1,28 @@
 import React, {useState} from 'react';
-import dynamic from 'next/dynamic';
 
 import Button from './button';
-const Loading = dynamic(() => import('./loading'));
 
 const Instant = () => {
 	const [results, setResults] = useState(null);
-	const [clicked, setClicked] = useState(false);
+	const [loading, setLoading] = useState(false);
 
 	const handleSubmit = async () => {
 		if (!results) {
-			setClicked(true);
-			setResults(<Loading text="Generowanie prasówki..."/>);
+			setLoading(true);
 		}
 
-		import('./utils/one-click').then(async module => {
+		import('../utils/one-click').then(async module => {
 			const result = await module.oneClickHandler();
 
-			setClicked(false);
+			setLoading(false);
 			setResults(result);
 		});
 	};
 
 	return (
 		<>
-			<Button disabled={clicked} type="submit" onClick={handleSubmit}>
-				{results === null ? 'Wygeneruj prasówkę (beta)' : 'Wygeneruj ponownie'}
+			<Button type="submit" onClick={handleSubmit}>
+				{results === null ? 'Wygeneruj prasówkę (beta)' : (loading ? '...' : 'Wygeneruj ponownie')}
 			</Button>
 			<br/>
 			<br/>

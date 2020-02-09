@@ -3,47 +3,42 @@ import Head from 'next/head';
 import React from 'react';
 import {createGlobalStyle} from 'styled-components';
 
+import Container from '../components/container';
+import Transition from '../components/transition';
+
 // Assets
-import '../node_modules/modern-normalize/modern-normalize.css';
-import RobotoMonoWoff from '../public/fonts/roboto-mono-v7-latin-ext-regular.woff';
-import RobotoMonoWoff2 from '../public/fonts/roboto-mono-v7-latin-ext-regular.woff2';
+import SpaceMonoWoff from '../public/fonts/space-mono-v5-latin-regular.woff';
+import SpaceMonoWoff2 from '../public/fonts/space-mono-v5-latin-regular.woff2';
 
 const GlobalStyle = createGlobalStyle`
 	@font-face {
-		font-family: 'Roboto Mono';
+		font-family: 'Space Mono';
 		font-style: normal;
 		font-weight: 400;
 		font-display: fallback;
-		src: local('Roboto Mono'), local('RobotoMono-Regular'),
-			url(${RobotoMonoWoff2}) format('woff2'),
-			url(${RobotoMonoWoff}) format('woff');
+		src: local('Space Mono'), local('SpaceMono-Regular'),
+			url(${SpaceMonoWoff2}) format('woff2'),
+			url(${SpaceMonoWoff}) format('woff');
 	}
 
 	body {
-		background-color: #212121;
-		font-family: 'Roboto Mono', monospace;
-		margin: auto;
-		width: 80%;
-		font-size: 16px;
-		padding-top: 50px;
-		padding-bottom: 100px;
+		font-family: 'Space Mono', monospace;
+		background-color: #121212;
 		color: #fff;
+		margin: auto;
+		width: 100%;
+		font-size: 16px;
+		padding-top: 20px;
+		padding-bottom: 100px;
 		-webkit-font-smoothing: antialiased;
 		text-rendering: optimizeSpeed;
-	}
-
-	summary {
-		cursor: pointer;
-	}
-
-	:focus {
-		outline: none;
+		overflow-x: hidden;
 	}
 `;
 
 class MyApp extends App {
 	render() {
-		const {Component, pageProps} = this.props;
+		const {Component, pageProps, router} = this.props;
 
 		return (
 			<>
@@ -51,7 +46,11 @@ class MyApp extends App {
 				<Head>
 					<title>Prasówka Generator</title>
 				</Head>
-				<Component {...pageProps}/>
+				<Container>
+					<Transition id={router.pathname}>
+						<Component {...pageProps} key={router.route}/>
+					</Transition>
+				</Container>
 			</>
 		);
 	}

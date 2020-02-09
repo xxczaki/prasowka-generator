@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import ExternalLink from '../link';
+import ExtLink from '../components/extlink';
 
 import {getWlkpArticles} from './glos-wlkp-scraper';
 import {getPolandArticles, getWorldArticles} from './tvn24-scraper';
@@ -14,14 +14,11 @@ const getArticles = async (amount, region, source) => {
 		const wielkopolska = await wlkpNews.slice(0, amount);
 
 		return wielkopolska.map(el => (
-			<div key={el.title}>
+			<div key={el.title} style={{border: '2px solid white', padding: '1em'}}>
 				<h3>{el.title}</h3>
-				<br/>
-				<p>{el.description} <ExternalLink href={el.url}>[CZYTAJ DALEJ]</ExternalLink></p>
-				<br/>
-				<p>Źródło: <u>Głos Wielkopolski</u></p>
-				<br/>
+				<p>{el.description} <ExtLink href={el.url}>[CZYTAJ DALEJ]</ExtLink></p>
 				<hr/>
+				<p>Źródło: <u>Głos Wielkopolski</u></p>
 			</div>
 		));
 	}
@@ -31,14 +28,11 @@ const getArticles = async (amount, region, source) => {
 		const poland = await plNews.slice(0, amount);
 
 		return poland.map(el => (
-			<div key={el.title}>
+			<div key={el.title} style={{border: '2px solid white', padding: '1em'}}>
 				<h3>{el.title}</h3>
-				<br/>
-				<p>{el.description} <ExternalLink href={el.url}>[CZYTAJ DALEJ]</ExternalLink></p>
-				<br/>
-				<p>Źródło: <u>{source === 'tvn24' ? 'TVN24' : ''}</u></p>
-				<br/>
+				<p>{el.description} <ExtLink href={el.url}>[CZYTAJ DALEJ]</ExtLink></p>
 				<hr/>
+				<p>Źródło: <u>{source === 'tvn24' ? 'TVN24' : ''}</u></p>
 			</div>
 		));
 	}
@@ -47,14 +41,11 @@ const getArticles = async (amount, region, source) => {
 	const world = await worldNews.slice(0, amount);
 
 	return world.map(el => (
-		<div key={el.title}>
+		<div key={el.title} style={{border: '2px solid white', padding: '1em'}}>
 			<h3>{el.title}</h3>
-			<br/>
-			<p>{el.description} <ExternalLink href={el.url}>[CZYTAJ DALEJ]</ExternalLink></p>
-			<br/>
-			<p>Źródło: <u>{source === 'tvn24' ? 'TVN24' : ''}</u></p>
-			<br/>
+			<p>{el.description} <ExtLink href={el.url}>[CZYTAJ DALEJ]</ExtLink></p>
 			<hr/>
+			<p>Źródło: <u>{source === 'tvn24' ? 'TVN24' : ''}</u></p>
 		</div>
 	));
 };

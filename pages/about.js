@@ -1,20 +1,17 @@
 import React from 'react';
 
-import Container from '../components/container';
-import Header from '../components/header';
-import Description from '../components/description';
-import Navigation from '../components/navigation';
-import Information from '../components/information';
+import Main from '../components/main';
+import ExtLink from '../components/extlink';
 
 const About = () => {
 	return (
-		<Container>
-			<Header>Informacje</Header>
-			<Description>Kilka słów o aplikacji...</Description>
-			<Navigation/>
+		<Main>
+			<p>Prasówka Generator ma na celu pomóc uczniom w tworzeniu prasówek - krótkich wypowiedzi o ostatnich wydarzeniach.</p>
+			<p>Sama aplikacja została stworzona z użyciem najnowszych technologii, takich jak <ExtLink href="https://reactjs.org/">React</ExtLink>, czy <ExtLink href="https://nextjs.org/">Next.js</ExtLink>.</p>
+			<p>Całość jest ciągle rozwijana i mogą wystąpić błędy.</p>
 			<br/>
-			<Information/>
-		</Container>
+			<p>👨‍💻 Twórcą Prasówka Generator jest Antoni Kępiński. Kod projektu dostępny jest na platformie <ExtLink href="https://github.com/xxczaki/prasowka-generator">Github</ExtLink>.</p>
+		</Main>
 	);
 };
 

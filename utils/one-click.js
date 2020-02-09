@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import ExternalLink from '../link';
+import ExtLink from '../components/extlink';
 
 import {getWlkpArticles} from './glos-wlkp-scraper';
 import {getPolandArticles, getWorldArticles} from './tvn24-scraper';
@@ -21,41 +21,28 @@ const oneClickHandler = async () => {
 
 	const result = (
 		<>
-			<div>
-				<h1>Wielkopolska:</h1>
-				<br/>
+			<article style={{border: '2px solid white', padding: '1em', maxWidth: '50em', marginBottom: '1em'}}>
+				<h1><u>Wielkopolska:</u></h1>
 				<h3>{wielkopolska.title}</h3>
-				<br/>
-				<p>{wielkopolska.description} <ExternalLink href={wielkopolska.url}>[CZYTAJ DALEJ]</ExternalLink></p>
-				<br/>
+				<p>{wielkopolska.description} <ExtLink href={wielkopolska.url}>[CZYTAJ DALEJ]</ExtLink></p>
+				<hr/>
 				<p>Źródło: <u>Głos Wielkopolski</u></p>
-				<br/>
-				<hr/>
-			</div>
-			<div>
-				<h1>Polska:</h1>
-				<br/>
+			</article>
+			<article style={{border: '2px solid white', padding: '1em', maxWidth: '50em', marginBottom: '1em'}}>
+				<h1><u>Polska:</u></h1>
 				<h3>{poland.title}</h3>
-				<br/>
-				<p>{poland.description.replace(/czytaj|dalej|»/g, '')} <ExternalLink href={poland.url}>[CZYTAJ DALEJ]</ExternalLink></p>
-				<br/>
-				<p>Źródło: <u>TVN24</u></p>
-				<br/>
+				<p>{poland.description.replace(/czytaj|dalej|»/g, '')} <ExtLink href={poland.url}>[CZYTAJ DALEJ]</ExtLink></p>
 				<hr/>
-			</div>
-			<div>
-				<h1>Świat:</h1>
-				<br/>
+				<p>Źródło: <u>TVN24</u></p>
+			</article>
+			<article style={{border: '2px solid white', padding: '1em', maxWidth: '50em', marginBottom: '1em'}}>
+				<h1><u>Świat:</u></h1>
 				<h3>{world.title}</h3>
-				<br/>
-				<p>{world.description.replace(/czytaj|dalej|»/g, '')} <ExternalLink href={world.url}>[CZYTAJ DALEJ]</ExternalLink></p>
-				<br/>
-				<p>Źródło: <u>TVN24</u></p>
-				<br/>
+				<p>{world.description.replace(/czytaj|dalej|»/g, '')} <ExtLink href={world.url}>[CZYTAJ DALEJ]</ExtLink></p>
 				<hr/>
-			</div>
+				<p>Źródło: <u>TVN24</u></p>
+			</article>
 			<footer>
-				<br/>
 				<b>Prawa autorskie do artykułów należą do ich autorów.</b>
 			</footer>
 		</>

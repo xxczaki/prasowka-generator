@@ -1,16 +1,15 @@
 import React, {useState, useMemo} from 'react';
-import dynamic from 'next/dynamic';
 import {useFormState} from 'react-use-form-state';
 
 import Input from './input';
 import Select from './select';
 import Button from './button';
-const Loading = dynamic(() => import('./loading'));
+import Grid from './grid';
 
 const Search = () => {
 	const [formState, {number, select}] = useFormState();
 	const [results, setResults] = useState(null);
-	const [clicked, setClicked] = useState(false);
+	const [loading, setLoading] = useState(false);
 
 	const handleSubmit = async e => {
 		e.preventDefault();
@@ -18,14 +17,13 @@ const Search = () => {
 		const {values} = formState;
 
 		if (!results) {
-			setClicked(true);
-			setResults(<Loading text="Wyszukiwanie wiadomości..."/>);
+			setLoading(true);
 		}
 
-		import('./utils/finder').then(async module => {
+		import('../utils/finder').then(async module => {
 			const result = await module.getArticles(values.amount, values.region, values.source);
 
-			setClicked(false);
+			setLoading(false);
 			setResults(result);
 		});
 	};
@@ -35,7 +33,7 @@ const Search = () => {
 			<label>
 				Ilość
 				<br/>
-				<Input {...number('amount')} required type="number" min="1" max="5" step="1" placeholder="1-5"/>
+				<Input {...number('amount')} required type="number" min="1" max="10" step="1" placeholder="1-10"/>
 			</label>
 			<br/>
 			<label>
@@ -77,12 +75,14 @@ const Search = () => {
 				</Select>
 			</label>
 			<br/>
-			<Button style={{width: '235px'}} disabled={clicked} type="submit">
-				{results === null ? 'Szukaj wiadomości' : 'Wyszukaj ponownie'}
+			<Button style={{width: '235px'}} type="submit">
+				{results === null ? 'Szukaj wiadomości' : (loading ? '...' : 'Wyszukaj ponownie')}
 			</Button>
 			<br/>
 			<br/>
-			{results}
+			<Grid>
+				{results}
+			</Grid>
 		</form>
 	);
 };
